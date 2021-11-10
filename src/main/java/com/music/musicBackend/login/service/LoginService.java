@@ -10,13 +10,11 @@ import java.util.Map;
 @Service
 public class LoginService {
 
-    @Autowired(required = false)
+    @Autowired
     private LoginMapper loginMapper;
 
     public int loginCheck(Map<String, Object> param){
-        System.out.println("service >> " + param);
         int result = loginMapper.loginCheck(param);
-        System.out.println(result);
         return result;
     }
 }

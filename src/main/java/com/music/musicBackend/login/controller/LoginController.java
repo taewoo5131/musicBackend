@@ -15,9 +15,6 @@ public class LoginController {
 
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public int login(@RequestParam HashMap<String,Object> paramMap) throws Exception{
-        String userId = (String)paramMap.get("userId");
-        String password = (String)paramMap.get("password");
-        Map<String,Object> param = paramMap;
         int result = loginService.loginCheck(paramMap);
         System.out.println("login!!!!");
         return result;
